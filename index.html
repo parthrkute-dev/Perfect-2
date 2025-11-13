@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect - Quick Commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    .product-card {
+      min-width: 250px;
+      max-width: 300px;
+      margin-right: 15px;
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+    .scrolling-wrapper {
+      display: flex;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+    .navbar-custom {
+  background: linear-gradient(to right, #ff6a00, #ee0979);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.badge-notify {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b); /* Gradient red-pink */
+  color: white;
+  font-size: 0.75rem;
+  padding: 6px 9px;
+  border-radius: 50%;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+  border: 2px solid rgb(242, 255, 0);
+  animation: pulse 1.0s infinite;
+}
+@keyframes pulse {
+  0% { transform: translate(50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(50%, -50%) scale(1.2); opacity: 0.8; }
+  100% { transform: translate(50%, -50%) scale(1); opacity: 1; }
+}
+
+.hero-gradient {
+  background: linear-gradient(270deg, #670000, #6c0263, #6a11cb);
+  background-size: 600% 600%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">PERFECT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+         <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Categories</a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="Electronics.html">Electronics</a></li>
+    <li><a class="dropdown-item" href="grocery.html">Grocery</a></li>
+    <li><a class="dropdown-item" href="snacks.html">Snacks & Breakfast</a></li>
+    <li><a class="dropdown-item" href="home-appliances.html">Home Appliances</a></li>
+  </ul>
+</li>
+
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#">
+              <i class="bi bi-cart-fill"></i> Cart
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-gradient text-white text-center py-5">
+    <h1>Welcome to Perfect</h1>
+    <p>Your one-stop shop for everything awesome</p>
+  </header>
+
+  
+<!-- Multi-Hero Section -->
+<div class="container-fluid px-3 py-4">
+  <div class="row g-3 text-center">
+    <!-- Electronics -->
+    <div class="col-md-3">
+      <div class="card text-white bg-dark h-100">
+        <img src="C:\Users\Parth\Downloads\Electronics image.png" class="card-img-top" alt="Electronics">
+        <div class="card-body">
+          <h5 class="card-title">Electronics</h5>
+          <p class="card-text">Mobiles, Laptops, Headphones</p>
+          <a href="electronics.html" class="btn btn-dark">Shop Now</a>
+          <span class="badge-notify">-50%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grocery -->
+    <div class="col-md-3">
+      <div class="card text-white bg-success h-100">
+        <img src="C:\Users\Parth\Downloads\Grocery image.png" class="card-img-top" alt="Grocery">
+        <div class="card-body">
+          <h5 class="card-title">Grocery</h5>
+          <p class="card-text">Rice, Wheat, Pulses</p>
+          <a href="grocery.html" class="btn btn-success">Shop Now</a>
+           <span class="badge-notify">-30%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snacks & Breakfast -->
+    <div class="col-md-3">
+      <div class="card text-white bg-warning h-100">
+        <img src="C:\Users\Parth\Downloads\Snacks image (2).png" class="card-img-top" alt="Snacks">
+        <div class="card-body">
+          <h5 class="card-title">Snacks & Breakfast</h5>
+          <p class="card-text">Aloo Sev, Peanuts</p>
+          <a href="snacks.html" class="btn btn-warning">Shop Now</a>
+           <span class="badge-notify">-10%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home Appliances -->
+    <div class="col-md-3">
+      <div class="card text-white bg-primary h-100">
+        <img src="C:\Users\Parth\Downloads\Home appliances image.png" class="card-img-top" alt="Home Appliances">
+        <div class="card-body">
+          <h5 class="card-title">Home Appliances</h5>
+          <p class="card-text">Kitchen Tools, Cleaning Gadgets</p>
+          <a href="home-appliances.html" class="btn btn-primary">Shop Now</a>
+           <span class="badge-notify">-38%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Hero Offer Section -->
+<section class="container my-5">
+  <div class="row align-items-center">
+    <!-- Left: Image -->
+    <div class="col-md-6 text-center">
+      <img src="C:\Users\Parth\Downloads\offer image.png" alt="Offers Image" class="img-fluid rounded shadow" />
+    </div>
+
+    <!-- Right: Offer Text -->
+    <div class="col-md-6">
+      <h2 class="mb-4">Exciting Offers Across Categories!</h2>
+      <ul class="list-group list-group-flush mb-3">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Electronics</strong>
+          <span class="badge bg-dark text-light fs-6">50% OFF</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Grocery</strong>
+          <span class="badge bg-success fs-6">30% OFF</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Snacks & Breakfast</strong>
+          <span class="badge bg-warning fs-6">10% OFF</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <strong>Home Appliances</strong>
+          <span class="badge bg-primary fs-6">38% OFF</span>
+        </li>
+      </ul>
+      <a href="#shop" class="btn btn-secondary btn-lg">Shop Now</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
